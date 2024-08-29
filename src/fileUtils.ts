@@ -1,10 +1,13 @@
-import fs from 'fs';
-import path from 'path';
+import fs from "fs";
+import path from "path";
 
-export function createFile(folder: string, fileName: string, content: string): void {
+export function createFile(
+  folder: string,
+  fileName: string,
+  content: string
+): void {
   const filePath = path.join(folder, fileName);
-  fs.writeFileSync(filePath, content, 'utf8');
-  console.log(`Created ${filePath}`);
+  fs.writeFileSync(filePath, content, "utf8");
 }
 
 export function createFolder(folderPath: string): void {
